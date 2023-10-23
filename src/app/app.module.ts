@@ -3,16 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MyCounterComponent } from './my-counter/my-counter.component';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './my-counter/counter.reducer';
+
+// Let's create the store here
+const store = {
+  counter: counterReducer
+};
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, MyCounterComponent],
+  imports: [BrowserModule, AppRoutingModule, StoreModule.forRoot(store)],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

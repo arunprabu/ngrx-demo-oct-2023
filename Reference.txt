@@ -1,0 +1,33 @@
+Any to Any Comp Commns 
+----
+  1. Using Services, RxJs/Observables, Subscription 
+  2. NgRx (Third party framework)
+
+store = { 
+  score: '101/2',
+  users: ['user1', 'user2'],
+  employees: []
+}
+AppComponent
+  HeaderComponent
+    MiniScorecardComponent
+      * using selector -- subscribing to store data
+
+  LiveScorecardComponent 
+    * using selector -- subscribing to store data
+
+  DetailedScorecardComponent
+    * using selector -- subscribing to store data
+
+  SidebarScorecardComponent
+    * using selector -- subscribing to store data
+    
+  SeriesScorecardComponent  
+    * using selector -- subscribing to store data
+    
+---------------------------------------
+
+Step 1: 
+  ng add @ngrx/store@latest
+
+  
